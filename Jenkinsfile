@@ -2,7 +2,7 @@ node
 {
     stage('Checkout')
     {
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'caa2c3e3-74cb-4bcd-af49-514a4f0ec36f', url: 'https://github.com/Akucina/SampleProject']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github_credentials', url: 'https://github.com/Akucina/SampleProject.git']]])
     }
     stage('Static Code Analysis')
     {
